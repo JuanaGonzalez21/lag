@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Login-register landing page</title>
+</head>
+<body>
+    <div class="back-imagenes">
+       <img src="./imagenes/bk.png" alt="background image">
+    </div>
+    <section class="right">
+        <section class="side login">
+            <p class="title">¿No es una cuenta?</p>
+            <p class="message">LOOKATGAME</p>
+            <button>register</button>
+            <img src="./imagenes/reg_back.png" alt="">
+        </section>
+
+        <section class="main register">
+            <div class="container">
+                <p class="title">register</p>
+                <form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Username"> 
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" placeholder="Password">
+                        <i class="fas fa-unlock"></i>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" placeholder="Confirm password">
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <button class="submit">register</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <section class="left">
+
+        <section class="side register">
+            <p class="title">¿Ya estas registrado?</p>
+            <p class="message">LOOKATGAME</p>
+            <button>Login</button>
+            <img src="./imagenes/log_back.png" alt="">
+        </section>
+
+        <section class="main login">
+            <div class="container">
+                <p class="title">Login</p>
+                <form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Username">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" placeholder="Password">
+                        <i class="fas fa-unlock"></i>
+                    </div>
+
+                    <button class="submit">Login</button>
+                </form>
+            </div>
+        </section>
+
+    </section>
+
+    <script>
+        var sideButtons = document.querySelectorAll('.side button');
+        sideButtons.forEach(btn => btn.addEventListener('click', () => {
+            document.body.classList.toggle('signup');
+        }))
+    </script>
+    
+</body>
+</html>
